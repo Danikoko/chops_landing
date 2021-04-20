@@ -90,4 +90,4 @@ sw.*
 *.swp
 
 fooyes/
-assets/img/
+# assets/img/
