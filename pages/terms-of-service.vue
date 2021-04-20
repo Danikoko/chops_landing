@@ -1,7 +1,69 @@
 <template>
   <div class="animate__animated animate__fadeIn">
     <Header />
-    <Main />
+    <main>
+		<div class="page_header blog element_to_stick">
+		    <div class="container">
+		    	<div class="row">
+		    		<div class="col-xl-8 col-lg-7 col-md-7 d-none d-md-block">
+		    			<h1>Blog and Articles</h1>
+		    		</div>
+		    		<div class="col-xl-4 col-lg-5 col-md-5">
+		    			<div class="search_bar_list">
+						    <input type="text" class="form-control" placeholder="Dishes, restaurants or cuisines">
+						    <button type="submit"><i class="icon_search"></i></button>
+						</div>
+		    		</div>
+		    	</div>
+		    	<!-- /row -->		       
+		    </div>
+		</div>
+		<!-- /page_header -->
+
+		<div class="container margin_60_20">			
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="singlepost">
+                    </div>
+                </div>
+				<!-- /col -->
+
+				<aside class="col-lg-3">
+					<div class="widget">
+						<div class="widget-title first">
+							<h4>Latest Post</h4>
+						</div>
+						<ul class="comments-list">
+							<BlogLatest v-for="n in 3" :key="n" />
+						</ul>
+					</div>
+					<!-- /widget -->
+					<div class="widget">
+						<div class="widget-title">
+							<h4>Categories</h4>
+						</div>
+						<ul class="cats">
+							<BlogCategory v-for="category in categories" :key="category" :category="category" />
+						</ul>
+					</div>
+					<!-- /widget -->
+					<div class="widget">
+						<div class="widget-title">
+							<h4>Popular Tags</h4>
+						</div>
+						<div class="tags">
+							<BlogTag class="mr-1" v-for="tag in tags" :key="tag" :tag="tag" />
+						</div>
+					</div>
+					<!-- /widget -->
+				</aside>
+				<!-- /aside -->
+			</div>
+			<!-- /row -->	
+		</div>
+		<!-- /container -->
+		
+	</main>
     <Footer />
     <Addons />
   </div>
