@@ -214,8 +214,8 @@
             </div>
         </div>
         <!-- /shape_element_2 -->
-
-        <div class="container margin_60_0">
+        <span class="anchor" id="map_4D85448A3D4C4180A02BD6FC387ABC45"></span>
+        <div id="partnership" class="container margin_60_0">
             <div class="row justify-content-center">
                 <div class="col-xl-9">
                     <div class="row">
@@ -226,7 +226,7 @@
                                 </div>
                                 <h3>Add Your Restaurant</h3>
                                 <p>Join us to be a part of the restaurants and food vendors that work with Chops to meet the needs of more customers with emphasis on prompt deliveries.</p>
-                                <a href="#!" class="btn_1 gradient">Partner with us</a>
+                                <a href="https://restaurant.chops.ng" target="_blank" class="btn_1 gradient">Partner with us</a>
                             </div>
                         </div>
                         <div class="col-md-6 ">
@@ -236,7 +236,7 @@
                                 </div>
                                 <h3>Become a Rider</h3>
                                 <p>As a rider, you can earn tangible income working as a Chops rider, join the fleet to be a part of our vast partner network.</p>
-                                <a href="#!" class="btn_1 gradient">Start with us</a>
+                                <a href="javascript:void(0)" class="btn_1 gradient" @click="display_rider_message()">Start with us</a>
                             </div>
                         </div>
                     </div>
@@ -294,10 +294,49 @@
 
 <script>
 export default {
-
+    methods: {
+        display_rider_message() {
+            Swal.fire({
+                title: 'Want to be a rider?',
+                html: 'Kindly send an email to <a href="mailto:hello@food.chops.ng">hello@food.chops.ng</a>',
+                icon: 'info'
+            })
+        }
+    },
+    mounted() {
+        $(".partnership-click").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#partnership").offset().top + -50
+            }, 500);
+        });
+    }
 }
 </script>
 
-<style>
+<style scoped>
+/* .anchor {
+    display: block;
+    height: 92px;
+    margin-top: -92px;
+    visibility: hidden;
+} */
+/* Set the header variable */
 
+/* --h-header: 50px; */
+
+/* Set the scroll margin top on all anchor elements by using .anchor class */
+/* Note: I'm setting plus 2.5em so the element has some breathing room on the top */
+
+.anchor {
+    scroll-margin-top: calc(var(50px) + 2.5em);
+}
+</style>
+<style>
+.swal2-styled.swal2-confirm {
+    background-color: #0d9219 !important;
+}
+.swal2-icon.swal2-info {
+    color: #1b5103 !important;
+    border-color: #0d9219 !important;
+}
 </style>

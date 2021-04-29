@@ -9,9 +9,8 @@
             </div>
             <div class="layer"></div><!-- Opacity Mask Menu Mobile -->
             <ul id="top_menu">
-                <!-- <li><a href="#" class="btn_1 gradient pulse_bt"><i class="icon-food_icon_shop" style="position: relative; top: 2px;"></i> Partner with us</a></li> -->
-                <li><a href="#sign-in-dialog" id="sign-in" class="login">Sign In</a></li>
-                <li><a href="wishlist.html" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
+                <!-- <li><a href="#sign-in-dialog" id="sign-in" class="login">Sign In</a></li> -->
+                <li><a href="https://food.chops.ng/login" target="_blank" class="login">Sign In</a></li>
             </ul>
             <!-- /top_menu -->
             <a href="#" class="open_close">

@@ -26,6 +26,7 @@ export default {
     script: [
       { hid: 'jQuery', src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js', async: true },
       { hid: 'maps', src: 'https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap', async: true, defer: true },
+      { hid: 'sweetalerts', src: '//cdn.jsdelivr.net/npm/sweetalert2@10', async: true }
       // { hid: 'common_func', src: '/js/common_func.js', async: true },
       // { hid: 'common_func', src: '/js/common_join.js', async: true },
     ]

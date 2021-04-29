@@ -7,9 +7,9 @@
                     <h3 data-target="#collapse_1">Legal</h3>
                     <div class="collapse dont-collapse-sm links" id="collapse_1">
                         <ul>
-                            <li><a href="about.html">Terms Of Service</a></li>
-                            <li><a href="submit-restaurant.html">Privacy Policy</a></li>
-                            <li><a href="help.html">Attributions &amp; Disclaimers</a></li>
+                            <li><NuxtLink to="/terms-of-service">Terms Of Service</NuxtLink></li>
+                            <li><NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink></li>
+                            <li><NuxtLink to="/attributions">Attributions &amp; Disclaimers</NuxtLink></li>
                         </ul>
                     </div>
                 </div>
@@ -17,8 +17,8 @@
                     <h3 data-target="#collapse_2">Company</h3>
                     <div class="collapse dont-collapse-sm links" id="collapse_2">
                         <ul>
-                            <li><a href="grid-listing-filterscol.html">About Us</a></li>
-                            <li><a href="grid-listing-filterscol-full-masonry.html">Careers</a></li>
+                            <li><a href="https://food.chops.ng/about">About Us</a></li>
+                            <li><a href="javascript:void(0);">Careers</a></li>
                             <li><NuxtLink to="/blog">Blog</NuxtLink></li>
                         </ul>
                     </div>
@@ -27,9 +27,9 @@
                         <h3 data-target="#collapse_3">Contact</h3>
                     <div class="collapse dont-collapse-sm contacts" id="collapse_3">
                         <ul>
-                            <li><i class="icon_chat_alt"></i><a href="#">Support</a></li>
-                            <li><i class="icon_box-checked"></i><a href="#">Partner with us</a></li>
-                            <li><i class="icon_mail_alt"></i><a href="#">support@chops.ng</a></li>
+                            <!-- <li><i class="icon_chat_alt"></i><a href="#">Support</a></li> -->
+                            <li><i class="icon_box-checked"></i><a class="partnership-click">Partner with us</a></li>
+                            <li><i class="icon_mail_alt"></i><a href="mailto:support@chops.ng">support@chops.ng</a></li>
                             <li><i class="icon_mobile"></i>07012345678</li>
                         </ul>
                     </div>
@@ -70,5 +70,7 @@ export default {
 </script>
 
 <style>
-
+.partnership-click {
+    cursor: pointer;
+}
 </style>
