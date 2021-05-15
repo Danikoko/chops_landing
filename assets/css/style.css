@@ -36,6 +36,12 @@ Author URI: http://themeforest.net/user/Ansonika/
 /* 0. ICONS */
 /*============================================================================================*/
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 header.sticky .main-menu > ul > li > a:hover {
   color: #1b5103 !important;
 }
@@ -6395,4 +6401,8 @@ a.box_topic.submit h3,
   border-radius: 0;
   border: 0;
   margin-bottom: 5px;
+}
+
+.swal2-styled.swal2-confirm:focus {
+  box-shadow: 0 0 0 3px rgb(13 146 25 / 48%) !important;
 }

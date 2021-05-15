@@ -16,11 +16,12 @@
                                         </div> -->
                                         <div class="form-group">
                                             <div class="custom_select clearfix">
-                                                <select class="wide form-control" style="display: none;">
+                                                <select id="location" class="wide form-control" style="display: none;">
                                                     <option disabled value="">Your Location</option>
-                                                    <option value="Abuja">Abuja</option>
-                                                    <option value="Lagos">Lagos</option>
-                                                    <option value="Enugu">Enugu</option>
+                                                    <option>Abuja</option>
+                                                    <option>Lagos</option>
+                                                    <option>Port Harcourt</option>
+                                                    <option>Enugu</option>
                                                 </select>
                                                 <div style="height: 50px; border: none;" class="nice-select wide form-control" tabindex="0">
                                                     <span style="vertical-align: sub;" class="current">
@@ -30,6 +31,7 @@
                                                         <!-- <li data-value="" class="option selected focus">Your Location</li> -->
                                                         <li data-value="Abuja" class="option">Abuja</li>
                                                         <li data-value="Lagos" class="option">Lagos</li>
+                                                        <li data-value="Port Harcourt" class="option">Port Harcourt</li>
                                                         <li data-value="Enugu" class="option">Enugu</li>
                                                     </ul>
                                                 </div>
@@ -37,7 +39,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-2">
-                                        <button class="btn_1 gradient" type="submit">Search</button>
+                                        <button @click.prevent="search_location()" class="btn_1 gradient" type="submit">Search</button>
                                     </div>
                                 </div>
                                 <!-- /row -->
@@ -294,7 +296,17 @@
 
 <script>
 export default {
+    data() {
+        return {
+            //
+        }
+    },
     methods: {
+        search_location() {
+            localStorage.setItem('location', document.getElementById('location').value);
+            // console.log(document.getElementById('location').value);
+            window.location = 'https://google.com/search?q=' + localStorage.getItem('location');
+        },
         display_rider_message() {
             Swal.fire({
                 title: 'Want to be a rider?',

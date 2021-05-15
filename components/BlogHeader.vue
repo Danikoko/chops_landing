@@ -24,7 +24,7 @@
                 </div>
                 <ul>
                     <li><NuxtLink to="/blog">Blog</NuxtLink></li>
-                    <li><a href="#">Partner with us</a></li>
+                    <li><a href="#" class="partnership-click">Partner with us</a></li>
                     <!-- <li><a href="#" class="btn_1 gradient pulse_bt"><i class="icon-food_icon_shop" style="position: relative; top: 2px;"></i> Partner with us</a></li> -->
                 </ul>
             </nav>
